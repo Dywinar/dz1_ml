@@ -10,7 +10,7 @@ def f(x):
 for i in range(len(x)):
     p = x[i]*w1 + w0
     w1 += 2*lr*x[i]*(y[i]-p)
-    w0 += 2*lr*x[i]*(y[i]-p)
+    w0 += 2*lr*(y[i]-p)
 plt.plot(x, [f(i) for i in x])
 plt.grid()
 plt.show()
@@ -29,7 +29,7 @@ plt.show()
 #   for i in range(len(x)):
 #     p = x[i]*w1 + w0
 #     w1 += 2*lr*x[i]*(y[i]-p)
-#     w0 += 2*lr*x[i]*(y[i]-p)
+#     w0 += 2*lr*(y[i]-p)
 #   if y[i]-p<0.68 and y[i]-p>0:
 #     break
 # plt.plot(x, [f(i) for i in x])
